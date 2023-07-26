@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/AnooshiaAziz/github.io/static/js/main.be67d62c.js",
+    "static/js/861.dbcaf7b9.js": "/AnooshiaAziz/github.io/static/js/861.dbcaf7b9.js",
+    "favicon.ico": "/AnooshiaAziz/github.io/favicon.ico",
+    "index.html": "/AnooshiaAziz/github.io/index.html",
+    "favicon-32.png": "/AnooshiaAziz/github.io/favicon-32.png",
+    "favicon-16.png": "/AnooshiaAziz/github.io/favicon-16.png",
+    "manifest.json": "/AnooshiaAziz/github.io/manifest.json",
+    "serve.json": "/AnooshiaAziz/github.io/serve.json",
+    "main.be67d62c.js.map": "/AnooshiaAziz/github.io/static/js/main.be67d62c.js.map",
+    "861.dbcaf7b9.js.map": "/AnooshiaAziz/github.io/static/js/861.dbcaf7b9.js.map"
+  },
+  "entrypoints": [
+    "static/js/861.dbcaf7b9.js",
+    "static/js/main.be67d62c.js"
+  ]
+}
