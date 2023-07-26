@@ -168,6 +168,7 @@ export default function Keypad() {
         <View style={Styles.row}>
           <Button title="AC" isBlue onPress={clear} />
           <Button title="Del" isBlue onPress={() => setFirstNumber(firstNumber.slice(0, -1))} />
+          <Button title="." isBlue onPress={() => handleNumberPress(".")} />
           <Button title="%" isBlue onPress={() => handleOperationPress("%")} />
           <Button title="÷" isBlue onPress={() => handleOperationPress("/")} />
         </View>

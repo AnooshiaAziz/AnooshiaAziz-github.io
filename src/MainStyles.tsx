@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const Styles =StyleSheet.create({
     btnBlue: {
-        width: 82,
+        width: 65,
         height: 72,
         borderRadius: 14,
         backgroundColor:'#678983',
@@ -20,7 +20,7 @@ export const Styles =StyleSheet.create({
         margin: 8,
     },
     btnLight: {
-        width: 82,
+        width: 92,
         height: 82,
         borderRadius: 14,
         backgroundColor:'#FFFFFF',
@@ -42,7 +42,7 @@ export const Styles =StyleSheet.create({
         color: '#FFFFFF',
     },
     smallTextDark: {
-        fontSize: 45,
+        fontSize: 35,
         color:'#000000',
     },
     // Keyboard
