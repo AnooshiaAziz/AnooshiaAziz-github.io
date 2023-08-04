@@ -97,7 +97,7 @@ export default function Keypad() {
   const c  = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
   
     function convert(num) {
-      if (num == 0 || num == '+' || num == '-' || num == '*' || num == '/' || num =='(' || num == ')') return " ";
+      if (num == 0 || num =='.' || num == '+' || num == '-' || num == '*' || num == '/' || num =='(' || num == ')') return " ";
       else return convert_arabs(num);
     }
     function convert_arabs(num){
@@ -137,9 +137,9 @@ export default function Keypad() {
     }
     function convert_tens(num) {
       if (num < 10) return a[num];
-      else if (num >= 10 && num < 20) return c[num - 10];
+      else if (num >= 10 && num < 20) return c[Math.floor(num % 10.0)];
       else {
-        return b[Math.floor(num / 10)] + " " + a[num % 10];
+        return b[Math.floor(num / 10)] + " " + a[Math.floor(num % 10.0)];
       }
     }
 
