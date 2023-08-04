@@ -10,9 +10,9 @@ export default function Keypad() {
     const [result, setResult] = React.useState<Number | null >(null);
 
     const handleNumberPress = (buttonValue: string) => {
-        if (firstNumber.length < 10) {
+        // if (firstNumber.length < 10) {
           setFirstNumber(firstNumber + buttonValue);
-        }
+        // }
     };
 
     const handleOperationPress = (buttonValue: string) => {
@@ -40,15 +40,13 @@ export default function Keypad() {
         }
         if (firstNumber.length > 5 && firstNumber.length < 8) {
           return (
-            <Text style={[Styles.screenFirstNumber, { fontSize: 70 }]}>
-              {firstNumber}
+            <Text style={[Styles.screenFirstNumber, { fontSize: 50 }]}> {firstNumber}
             </Text>
           );
         }
         if (firstNumber.length > 7) {
           return (
-            <Text style={[Styles.screenFirstNumber, { fontSize: 50 }]}>
-              {firstNumber}
+            <Text style={[Styles.screenFirstNumber, { fontSize: 30 }]}> {firstNumber}
             </Text>
           );
         }
@@ -99,7 +97,7 @@ export default function Keypad() {
   const c  = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
   
     function convert(num) {
-      if (num == 0 ) return "zero";
+      if (num == 0 || num == '+' || num == '-' || num == '*' || num == '/' || num =='(' || num == ')') return " ";
       else return convert_arabs(num);
     }
     function convert_arabs(num){
@@ -148,7 +146,6 @@ export default function Keypad() {
 
     return(
         <View style={Styles.viewBottom}>
-            
         <View
           style={{
             height: 120,
@@ -166,34 +163,38 @@ export default function Keypad() {
           {firstNumberDisplay()}
         </View>
         <View style={Styles.row}>
+          <Button title="(" isBlue onPress={() => handleNumberPress("(")} />
+          <Button title=")" isBlue onPress={() => handleNumberPress(")")} />
           <Button title="AC" isBlue onPress={clear} />
-          <Button title="Del" isBlue onPress={() => setFirstNumber(firstNumber.slice(0, -1))} />
-          <Button title="." isBlue onPress={() => handleNumberPress(".")} />
-          <Button title="%" isBlue onPress={() => handleOperationPress("%")} />
-          <Button title="÷" isBlue onPress={() => handleOperationPress("/")} />
+          <Button title="Del" isBlue onPress={() => setFirstNumber(firstNumber.slice(0, -1))} />          
         </View>
         <View style={Styles.row}>
           <Button title="7" onPress={() => handleNumberPress("7")} />
           <Button title="8" onPress={() => handleNumberPress("8")} />
           <Button title="9" onPress={() => handleNumberPress("9")} />
-          <Button title="x" isBlue onPress={() => handleOperationPress("*")} />
+          <Button title="÷" isBlue onPress={() => handleOperationPress("/")} />          
         </View>
         <View style={Styles.row}>
           <Button title="4" onPress={() => handleNumberPress("4")} />
           <Button title="5" onPress={() => handleNumberPress("5")} />
           <Button title="6" onPress={() => handleNumberPress("6")} />
-          <Button title="-" isBlue onPress={() => handleOperationPress("-")} />
+          <Button title="x" isBlue onPress={() => handleOperationPress("*")} />          
         </View>
         <View style={Styles.row}>
           <Button title="1" onPress={() => handleNumberPress("1")} />
           <Button title="2" onPress={() => handleNumberPress("2")} />
           <Button title="3" onPress={() => handleNumberPress("3")} />
-          <Button title="+" isBlue onPress={() => handleOperationPress("+")} />
+          <Button title="-" isBlue onPress={() => handleOperationPress("-")} />          
         </View>
         <View style={Styles.row}>
           <Button title="0" onPress={() => handleNumberPress("0")} />
           <Button title="00" onPress={() => handleNumberPress("00")} />
-          <Button title="000" onPress={() => handleNumberPress("000")} />
+          <Button title="."  onPress={() => handleNumberPress(".")} />
+          <Button title="+" isBlue onPress={() => handleOperationPress("+")} />
+        </View>
+        <View style={Styles.row}>
+          <Button title="000" isGray onPress={() => handleNumberPress("000")} />
+          <Button title="%" isBlue onPress={() => handleOperationPress("%")} />
           <Button title="=" isBlue onPress={() => getResult()} />
         </View>
       </View>

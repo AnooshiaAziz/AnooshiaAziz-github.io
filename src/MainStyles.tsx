@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const Styles =StyleSheet.create({
     btnBlue: {
-        width: 65,
+        width: 82,
         height: 72,
         borderRadius: 14,
         backgroundColor:'#678983',
@@ -11,17 +11,17 @@ export const Styles =StyleSheet.create({
         margin: 8,
     },
     btnDark: {
-        width: 82,
-        height: 82,
+        width: 182,
+        height: 72,
         borderRadius: 14,
-        backgroundColor:'#678983',
+        backgroundColor:'#FFFFFF',
         justifyContent: "center",
         alignItems: "center",
         margin: 8,
     },
     btnLight: {
-        width: 92,
-        height: 82,
+        width: 82,
+        height: 72,
         borderRadius: 14,
         backgroundColor:'#FFFFFF',
         justifyContent: "center",
